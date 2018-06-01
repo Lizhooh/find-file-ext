@@ -1,0 +1,17 @@
+{
+  "name": "find-file-ext",
+  "version": "0.1.0",
+  "description": "find-file-ext 可用于查找文件目录下的某个/某些文件后缀的文件。",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lizhooh/find-file-ext.git"
+  },
+  "keywords": [
+    "file",
+    "find",
+    "ext"
+  ],
+  "author": "lizhooh",
+  "license": "MIT"
+}
