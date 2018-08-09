@@ -1,13 +1,11 @@
 const fs = require('fs');
 const util = require('util');
 const path = require('path');
-const signale = require('signale');
 
 const lstat = util.promisify(fs.lstat);
 const readdir = util.promisify(fs.readdir);
 
 async function findFileExt(paths = [], types = [], ignoreDir = []) {
-    signale.pending('File type search start...');
     const arr = [];
 
     if (!Array.isArray(paths)) {
@@ -37,19 +35,18 @@ async function findFileExt(paths = [], types = [], ignoreDir = []) {
                         }
                     }
                     catch (err) {
-                        signale.debug('Error: ' + err.message);
+                        log.error('Error: ' + err.message);
                     }
                 }
                 await Promise.all(files.map(i => deep(i)));
             }
         }
         catch (err) {
-            signale.debug('Error -> ' + err.message);
+            log.error('Error: ' + err.message);
         }
     }
 
     await Promise.all(paths.map(p => find(p)));
-    signale.success('File type search end...');
     return arr;
 }
 
