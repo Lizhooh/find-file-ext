@@ -5,7 +5,7 @@
 `find-file-ext` 可用于查找文件目录下的某个/某些文件后缀的文件。（需要 Nodejs >= 7.6）。
 
 
->                   查找的目录      后缀       排除的目录
+>             查找的目录      后缀       排除的目录
 > findFileExt(paths = [], types = [], ignoreDir = [])
 > 返回结果路径数组
 
