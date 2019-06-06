@@ -1,6 +1,6 @@
 {
   "name": "find-file-ext",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "find-file-ext 可用于查找文件目录下的某个/某些文件后缀的文件。",
   "main": "index.js",
   "repository": {

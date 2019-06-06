@@ -35,14 +35,14 @@ async function findFileExt(paths = [], types = [], ignoreDir = []) {
                         }
                     }
                     catch (err) {
-                        log.error('Error: ' + err.message);
+                        console.error('Error: ' + err.message);
                     }
                 }
                 await Promise.all(files.map(i => deep(i)));
             }
         }
         catch (err) {
-            log.error('Error: ' + err.message);
+            console.error('Error: ' + err.message);
         }
     }
 
